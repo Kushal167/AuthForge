@@ -6,6 +6,7 @@ It provides authentication, authorization, and user management features suitable
 ---
 
 ## Features
+
 - User Registration & Login
 - Password Hashing (bcrypt)
 - JWT Authentication (Access & Refresh Tokens)
@@ -18,6 +19,7 @@ It provides authentication, authorization, and user management features suitable
 ---
 
 ## Tech Stack
+
 - **Backend**: FastAPI
 - **Database**: PostgreSQL
 - **ORM**: SQLAlchemy
@@ -31,6 +33,7 @@ It provides authentication, authorization, and user management features suitable
 ## Setup & Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/your-username/AuthForge.git
 cd AuthForge
@@ -63,3 +66,4 @@ uvicorn main:app --reload
 Open Swagger docs in browser:
 
 http://127.0.0.1:8000/docs
+```
