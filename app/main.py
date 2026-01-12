@@ -6,6 +6,7 @@ from app.db.session import engine
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AuthForge")
+app.include_router(auth.router)
 
 app.include_router(auth.router)
 
