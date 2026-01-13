@@ -1,14 +1,16 @@
 from pydantic import BaseModel, EmailStr
 
-class UserCreate(BaseModel):   # schema for creating a new user
+# Request schema for creating a new user
+class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    full_name: str | None = None
+    full_name: str
 
-class UserResponse(BaseModel):   # schema for returning user information
-    id:int
+# Response schema for returning user info (without password)
+class UserResponse(BaseModel):
+    id: int
     email: EmailStr
-    full_name: str | None = None
+    full_name: str
 
-    class config:          # configuration to work with ORM objects
+    class Config:
         orm_mode = True

@@ -1,8 +1,9 @@
 from app.db.session import SessionLocal
 
+# Dependency to get a DB session
 def get_db():
     db = SessionLocal()
     try:
-        yield db      # Yielding the database session for use in API endpoints
+        yield db
     finally:
         db.close()
